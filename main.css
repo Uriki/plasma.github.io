@@ -1,0 +1,32 @@
+body {
+    background-image: url('bg.png'); /* Especifica la ruta de la imagen */
+    background-size: 300px 300px; /* Ajusta la imagen al tamaño del viewport */
+    background-position: center; /* Centra la imagen */
+}
+
+Header {
+    position: relative; /* Añade posicionamiento relativo al header */
+    z-index: 1; /* Asegura que el header esté encima de los GIFs */
+}
+.gif-izquierdo, .gif-derecho {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    z-index: -1; /* Asegura que estén sobre otros elementos */
+    top: 0; /* Se mantiene en la parte superior */
+}
+
+.gif-izquierdo {
+    left:75%; /* Posiciona en el centro horizontal */
+    transform: translateX(100%); /* Centra horizontalmente */
+}
+
+.gif-derecho {
+    right:85%; /* Posiciona en el centro horizontal */
+    transform: translateX(100%); /* Centra horizontalmente */
+}
+
+.contenedor {
+    margin: 0 auto; /* Margen automático para centrar horizontalmente */
+    width: fit-content; /* Ancho ajustado al contenido */
+}
